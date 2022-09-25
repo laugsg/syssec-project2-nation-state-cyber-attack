@@ -1,5 +1,2 @@
 # Provide your IPtables rule to block SSH access to the attacking IP address.
-iptables -I INPUT -p tcp -d 192.168.56.1 -j DROP
-
-# block the SSH port
-iptables -I INPUT --dport 22 -j DROP
+iptables -I INPUT -p tcp --dport 22 -d 192.168.56.1 -j DROP
