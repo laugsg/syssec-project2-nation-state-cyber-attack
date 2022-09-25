@@ -1,10 +1,10 @@
 rule unknown_threat {
 	meta:
 		Author: "Lautaro"
-		Descrption: "This rules detects wget external requests and suspicious domain"
+		Descrption: "This rules listen for connections targeting the suspicious port or domain"
 	string:
-		$wget = "wget"
 		$domain = "darkl0rd"
+		$malicious_port = "56565"
 	condition:
-		$wget or $domain
+		$domain or $malicious_port
 } 

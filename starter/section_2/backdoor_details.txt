@@ -4,7 +4,7 @@
 darklord
 
 # Backdoor process name
-960
+/tmp/remotesec -k -l 56565
 
 # Backdoor port number the above process is listening on
 *:56565
